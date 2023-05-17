@@ -22,7 +22,8 @@
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
-    "@rocketseat/eslint-config": "^1.2.0"
+    "@rocketseat/eslint-config": "^1.2.0",
+    "prettier-plugin-tailwindcss": "^0.3.0"
   },
   "private": true
 }
