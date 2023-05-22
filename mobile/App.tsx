@@ -8,7 +8,13 @@ import {
 
 import blurBg from './src/assets/bg-blur.png'
 
+import Stripes from './src/assets/stripes.svg'
+
 import { BaiJamjuree_700Bold } from '@expo-google-fonts/bai-jamjuree'
+import { styled } from 'nativewind'
+
+// it allows the stripes to use tailwindcss
+const StyledStripes = styled(Stripes)
 
 export default function App() {
   const [hasLoadedFonts] = useFonts({
@@ -26,7 +32,7 @@ export default function App() {
       className="relative flex-1 items-center bg-gray-900"
       imageStyle={{ position: 'absolute', left: '-100%' }}
     >
-      <Text className="font-title text-5xl text-gray-50">Rocketseat</Text>
+      <StyledStripes className="absolute left-2" />
       <StatusBar style="light" translucent />
     </ImageBackground>
   )
