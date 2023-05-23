@@ -1,7 +1,6 @@
 import { FastifyInstance } from 'fastify'
 import { prisma } from '../lib/prisma'
 import { z } from 'zod'
-import { request } from 'http'
 
 export async function memoriesRoutes(app: FastifyInstance) {
   app.get('/memories', async () => {
@@ -60,7 +59,7 @@ export async function memoriesRoutes(app: FastifyInstance) {
     const bodySchema = z.object({
       content: z.string(),
       coverUrl: z.string(),
-      isPublic: z.boolean().default(false),
+      isPublic: z.coerce.boolean().default(false),
     })
 
     const { content, coverUrl, isPublic } = bodySchema.parse(request.body)
