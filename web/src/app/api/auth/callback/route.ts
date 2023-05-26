@@ -11,13 +11,13 @@ export async function GET(request: NextRequest) {
 
   const { token } = registerResponse.data
 
-  // redirects the user to /
+  // it redirects user to /
   const redirectURL = new URL('/', request.url)
 
   const cookieExpiresInSeconds = 60 * 60 * 24 * 30
 
   return NextResponse.redirect(redirectURL, {
-    // saving the token information on cookie, path=/ all app can access the token
+    // it's saving the token information on cookie, path=/ all app can access the token
     headers: {
       'Set-Cookie': `token=${token}; Path=/; max-age=${cookieExpiresInSeconds};`,
     },
