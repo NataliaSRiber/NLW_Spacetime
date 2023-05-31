@@ -8,7 +8,7 @@ import {
   Roboto_700Bold,
 } from '@expo-google-fonts/roboto'
 import { BaiJamjuree_700Bold } from '@expo-google-fonts/bai-jamjuree'
-import { Slot, SplashScreen } from 'expo-router'
+import { SplashScreen, Stack } from 'expo-router'
 import { StatusBar } from 'expo-status-bar'
 
 // it allows the stripes to use tailwindcss
@@ -33,8 +33,13 @@ export default function Layout() {
     >
       <StyledStripes className="absolute left-2" />
       <StatusBar style="light" translucent />
-      {/* it shows page content */}
-      <Slot />
+      {/* it shows page content and it shows a transition between pages */}
+      <Stack
+        screenOptions={{
+          headerShown: false,
+          contentStyle: { backgroundColor: 'transparent' },
+        }}
+      />
     </ImageBackground>
   )
 }
