@@ -12,9 +12,9 @@ const app = fastify()
 
 app.register(multipart)
 
-// to shows folder when access url
+// it makes the folder public, so you can access image's url
 app.register(require('@fastify/static'), {
-  root: resolve(__dirname, '..uploads'),
+  root: resolve(__dirname, '../uploads'),
   prefix: '/uploads',
 })
 
