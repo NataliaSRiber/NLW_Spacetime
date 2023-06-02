@@ -5,6 +5,7 @@ import { createWriteStream } from 'node:fs'
 import { pipeline } from 'node:stream'
 import { promisify } from 'node:util'
 
+// it shows when the process is over
 const pump = promisify(pipeline)
 
 export async function uploadRoutes(app: FastifyInstance) {
@@ -38,6 +39,7 @@ export async function uploadRoutes(app: FastifyInstance) {
     // creates a url to access files
     const fullUrl = request.protocol.concat('://').concat(request.hostname)
     const fileUrl = new URL(`/uploads/${fileName}`, fullUrl).toString()
+    // console.log(fileUrl)
     return { fileUrl }
   })
 }
