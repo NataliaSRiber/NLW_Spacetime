@@ -34,7 +34,7 @@ export function NewMemoryForm() {
       {
         coverUrl,
         content: formData.get('content'),
-        isPublic: !!formData.get('isPublic'),
+        isPublic: formData.get('isPublic'),
       },
       {
         headers: {
