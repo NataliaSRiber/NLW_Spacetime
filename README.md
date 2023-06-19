@@ -112,4 +112,3 @@ $ npm install
 
 # Execute a aplicação em modo de desenvolvimento
 $ npm run start
-<br>
