@@ -15,6 +15,12 @@ export default function Hero() {
           com o mundo!
         </p>
       </div>
+      <a
+        href=""
+        className="inline-block rounded-full bg-green-500 px-5 py-3 font-alt text-sm uppercase leading-none text-black hover:bg-green-600"
+      >
+        CADASTRAR LEMBRANçA
+      </a>
       <Link
         href="/memories/new"
         className="inline-block rounded-full bg-green-500 px-5 py-3 font-alt text-sm uppercase leading-none text-black hover:bg-green-600"
